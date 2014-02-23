@@ -1,0 +1,80 @@
+body {
+    background: #fff url(../img/background_cover.jpg) no-repeat top right;
+	background-attachment: fixed;
+	background-size: cover;
+    font-family: 'Open Sans Condensed','Arial Narrow', serif;
+}
+
+#container {
+    margin: 0;
+    padding: 2%;
+    font-size: 22px;
+    padding-bottom: 100px;
+}
+
+/*-- header --*/
+.container > header h1 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);   
+}
+
+
+#hr-manager-name {
+    height: 42px;
+    vertical-align: bottom;
+    border-radius: 10px;
+    border: 0;
+    font-size: 36px;
+}
+
+/*-- content --*/
+.introduction {
+    padding-right: 15%;
+}
+
+.soundcloud-search-app {
+    padding-right: 20%;
+}
+
+.intro-app {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.intro-app-image {
+    width: 50%;
+    height: 50%;
+    margin:auto;
+}
+
+.setting-app {
+    padding-bottom: 20px;
+}
+
+.trivial-fact {
+    font-size: 18px;
+}
+
+/*-- footer --*/
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    line-height: 22px;
+    font-size: 18px;
+    background: #ffffff;
+    z-index: 9999;
+    font-family: Cambria, Georgia, serif;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.hr-manager-name {
+    font-weight: bold;
+}
+
+#footer >p {
+    margin: 10px;
+}
