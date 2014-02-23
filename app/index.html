@@ -27,12 +27,7 @@
     client_id: "3c5475d258553fb74bca0144c6729f9c",
   });
             
-            $("#loadTracks").on("click", function(){
-    SC.get("/tracks", {limit: 1}, function(tracks){
-      var track = tracks[0];
-      SC.oEmbed(track.uri, document.getElementById("track"));
-    });
-  });
+
             
             $(document).ready(function(){
                 $("#search-term").keydown(function(event){
@@ -40,6 +35,13 @@
                         $("#search-btn").trigger('click');
                     }
                 });
+                
+                    $("#loadTracks").on("click", function(){
+    SC.get("/tracks", {limit: 1}, function(tracks){
+      var track = tracks[0];
+      SC.oEmbed(track.uri, document.getElementById("track"));
+    });
+  });
             });
         </script>
 
