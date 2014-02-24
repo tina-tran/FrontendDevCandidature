@@ -93,15 +93,15 @@
                     
                     
                     <div class="col-lg-2">
-                        <input id="title-filter-term" type="text" class="form-control" ng-model="searchTerm.title" placeholder="filter by title"/>
+                        <input id="title-filter-term" type="text" class="form-control" ng-disabled="candidatureCtrl.currentStreamedTrack != 0"  ng-model="searchTerm.title" placeholder="filter by title"/>
                     </div>
                     
                     <div class="col-lg-2">
-                        <input id="genre-filter-term" type="text" class="form-control" ng-model="searchTerm.genre" placeholder="filter by genre"/>
+                        <input id="genre-filter-term" type="text" class="form-control" ng-disabled="candidatureCtrl.currentStreamedTrack != 0" ng-model="searchTerm.genre" placeholder="filter by genre"/>
                     </div>
                     
                     <div class="col-lg-2">
-                        <input id="user-filter-term" type="text" class="form-control" ng-model="searchTerm.user.username" placeholder="filter by user"/>
+                        <input id="user-filter-term" type="text" class="form-control" ng-disabled="candidatureCtrl.currentStreamedTrack != 0" ng-model="searchTerm.user.username" placeholder="filter by user"/>
                     </div>
                     
                 </div>
