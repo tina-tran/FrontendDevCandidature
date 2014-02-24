@@ -20,9 +20,10 @@ angular.module('myApp.controllers', ['myApp.services']).
         };
     
         this.searchTerm = '';
-    
+      
         this.tracks = soundcloudService.query();
-
+      
+       
         this.doSearch =function() {
             if ($.inArray(this.searchTerm, this.tastes)) {
                 ++this.matchCount;
@@ -44,4 +45,16 @@ angular.module('myApp.controllers', ['myApp.services']).
                
             this.tracks = soundcloudService.query({q:this.searchTerm});
         } 
+        
+        
+        this.playSound=function(track) {
+            SC.stream("/tracks/" + track.id, function(sound){
+                sound.play();
+                $('#stop-btn-track'+track.id).click(function(e) {
+                    e.preventDefault();
+                    sound.stop();
+                });
+            });
+        }             
+
   }]);
