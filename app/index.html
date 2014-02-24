@@ -125,7 +125,7 @@
                         <td>{{track.duration | date:'mm:ss'}}</td>
                         <td>
                             <button class="btn btn-primary" type="button" ng-disabled="candidatureCtrl.currentStreamedTrack != 0" ng-click="candidatureCtrl.playSound(track)"><i class="fa fa-play"></i></button></td>
-                        <td><button class="btn btn-primary" type="button" ng-disabled="candidatureCtrl.currentStreamedTrack != track.id" id="stop-btn-track{{track.id}}"><i class="fa fa-stop"></i></button></td>  
+                        <td><button class="btn btn-primary" type="button" ng-disabled="candidatureCtrl.currentStreamedTrack != track.id" id="stop-btn-track{{track.id}}" ng-click="candidatureCtrl.currentStreamedTrack = 0"><i class="fa fa-stop"></i></button></td>  
                         
                     </tr>
                     

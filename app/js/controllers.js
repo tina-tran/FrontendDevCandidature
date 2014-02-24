@@ -29,7 +29,6 @@ angular.module('myApp.controllers', ['myApp.services']).
             // stop the current streaming if so
             if (this.currentStreamedTrack != 0) {
                 $('#stop-btn-track'+this.currentStreamedTrack).click();
-                this.currentStreamedTrack = 0;
             }
             
             if ($.inArray(this.searchTerm, this.tastes)) {
@@ -63,7 +62,6 @@ angular.module('myApp.controllers', ['myApp.services']).
                 $('#stop-btn-track'+track.id).click(function(e) {
                     e.preventDefault();
                     sound.stop();
-                    this.currentStreamedTrack = 0;
                 });
             });
         }  
