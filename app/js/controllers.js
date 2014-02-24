@@ -20,11 +20,18 @@ angular.module('myApp.controllers', ['myApp.services']).
         };
     
         this.searchTerm = '';
+        this.currentStreamedTrack = 0;
       
         this.tracks = soundcloudService.query();
       
        
         this.doSearch =function() {
+            // stop the current streaming if so
+            if (this.currentStreamedTrack != 0) {
+                $('#stop-btn-track'+this.currentStreamedTrack).click();
+                this.currentStreamedTrack = 0;
+            }
+            
             if ($.inArray(this.searchTerm, this.tastes)) {
                 ++this.matchCount;
             }
@@ -47,14 +54,17 @@ angular.module('myApp.controllers', ['myApp.services']).
         } 
         
         
+        
         this.playSound=function(track) {
+            this.currentStreamedTrack = track.id;
             SC.stream("/tracks/" + track.id, function(sound){
                 sound.play();
+
                 $('#stop-btn-track'+track.id).click(function(e) {
                     e.preventDefault();
                     sound.stop();
+                    this.currentStreamedTrack = 0;
                 });
             });
-        }             
-
+        }  
   }]);
