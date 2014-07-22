@@ -4,15 +4,15 @@
 
 angular.module('myApp.controllers', ['myApp.services']).
   controller('CandidatureController', ['soundcloudService', function(soundcloudService) {
-        this.tastes = ['techno', 'rock', 'electronic', 'alternative rock', 'wankelmut', 'bear hands', 'manchester orchestra', 'linkin park', 'two door cinema club', 'imagine dragons', 'passenger', 'parov stelar', 'snow patrol', 'seether', 'passion pit', 'rem', 'peer kusiv'];
-        this.matchCount = new Date();
+        this.tastes = ['techno', 'rock', 'electronic', 'alternative rock', 'wankelmut', 'bear hands', 'manchester orchestra', 'linkin park', 'two door cinema club', 'imagine dragons', 'passenger', 'parov stelar', 'snow patrol', 'seether', 'passion pit', 'rem', 'peer kusiv', 'rammstein', 'house', 'deep house'];
+        this.matchCount = 0;
     
         this.visitor = '';  
 
 
         this.userName = function() {
             if (this.visitor=='') {
-                return ', hiring manager';
+                return ', you there';
             }
             else{
                 return ', ' + this.visitor;

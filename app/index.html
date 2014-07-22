@@ -57,22 +57,11 @@
     <body>
         <div id="container" class="container" ng-controller="CandidatureController as candidatureCtrl">
             <header>
-                <h1>Hallo <input id="hr-manager-name" type="text" ng-model="candidatureCtrl.visitor" placeholder="hiring manager">!</h1>
+                <h1>Hallo <input id="hr-manager-name" type="text" ng-model="candidatureCtrl.visitor" placeholder="you there">!</h1>
             </header>
             
             <div class="introduction">
-                <p>
-                I haven't had time to finish any side projects yet except <a href="http://tinatran.net" target="_blank">my personal website</a>. But as indicated in <a href="assets/ResumeTinaTRAN.pdf" target="_blank">my resume</a> or in my <a href="http://www.linkedin.com/pub/thi-nha-uyen-tina-tran/55/20/a03" target="_blank"><i
-						class="fa fa-linkedin" target="_blank"></i> profile</a>, the most recent project I worked on the development was the Android banking application of Crédit Mutuel and CIC banks and it was also the most challenging project for the following reasons:
-                <ul>
-                    <li>These applications were developed, at that time, with the SDK for <i class="fa fa-android"></i> 4.1 (Jelly Bean) which was a huge change regarding the old version of these applications and required a rewritten from scratch.</li>
-                    <li>An in-house framework was created at the same time for the current development and the future ones.</li>
-                    <li>The deadline was short.</li>
-                </ul>
-                I needed to learn and improve my understanding of design patterns in Java in order to participate to build the framework mentioned above. Plus, I had to improve my Android expertise quickly to implement new features with the more complex new SDK. My approach was hard-working and focusing on what needed to be done.
-                </p>
-                <p>
-                Besides, this candidature app is a challenge as well. I'm on an on-going self training for different cutting-edge Javascript frameworks such as Backbone, Node and Ember but I haven't attacked Angular yet. I decided then to learn and create this Angular app in 3 days for my application.</p>
+                <p>I'm on an on-going self training for different cutting-edge Javascript frameworks such as Backbone, Node and AngularJS and I like to hang out on Soundcloud to enjoy the ever-changing music scene (especially the rock and house/deep house genres). I decided then to create this Angular app combining these 2 hobbies within 3 days ;). It was a funny experience to learn new technology.</p>
             </div>
         
             <section class="soundcloud-search-app">       
@@ -84,7 +73,7 @@
                 <div class="row setting-app">
                     <div class="col-lg-6">
                         <div class="input-group">
-                            <input id="search-term" class="form-control" type="text" ng-model="candidatureCtrl.searchTerm" placeholder="something rock">
+                            <input id="search-term" class="form-control" type="text" ng-model="candidatureCtrl.searchTerm" placeholder="something rocks">
                             <span class="input-group-btn">
                                 <button  id="search-btn" class="btn btn-default" type="button" ng-click="candidatureCtrl.doSearch()"><i class="fa fa-search"></i> Search</button>
                             </span>
@@ -138,7 +127,7 @@
 
             <footer id="footer">
 						<p>
-                Thank you for dropping me an <a href="mailto:thi.nha.uyen@gmail.com?subject=I-love-cats-too!"><i class="fa fa-envelope"></i></a><span class="hr-manager-name">{{candidatureCtrl.userName()}}</span>.<br> Your feedback surely will help me get small improvements done but <strong>HIRE ME</strong> is even better to get your "return on investment" :)<br> 
+                Please feel free to drop me an <a href="mailto:thi.nha.uyen@gmail.com?subject=I-love-cats-too!"><i class="fa fa-envelope"></i></a><span class="hr-manager-name">{{candidatureCtrl.userName()}}</span>.<br> 
                     
             </footer>
         </div>
